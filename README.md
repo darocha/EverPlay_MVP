@@ -2,7 +2,7 @@
 
 ## Decentralized AI-Powered Finance, Gaming, and Social Interaction Ecosystem
 
-> OnyxVerse is a next-generation ecosystem built on the **optimusfox**, using decentralized AI. It supports multiple blockchains like **Ethereum (EVM)**, **Solana**, and more. Play-to-Earn (P2E) mechanics let you earn real crypto rewards.
+> OnyxVerse is a next-generation ecosystem built on the **Solidus AITech**, using decentralized AI. It supports multiple blockchains like **Ethereum (EVM)**, **Solana**, and more. Play-to-Earn (P2E) mechanics let you earn real crypto rewards.
 
 ---
 
@@ -85,5 +85,5 @@ npm start
 - Tag related issues/tasks.
 
 ## Confidentiality
-This repository is proprietary to **optimusfox**.
+This repository is proprietary to **Solidus AITech**.
 
