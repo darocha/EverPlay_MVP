@@ -1,89 +1,114 @@
-# ACN-Verse
+# 🌌 Alchemy_Verse MVP
 
-## Decentralized AI-Powered Finance, Gaming, and Social Interaction Ecosystem
-
-> ACN-Verse is a next-generation ecosystem built on the **AITech Cloud Network**, using decentralized AI. It supports multiple blockchains like **Ethereum (EVM)**, **Solana**, and more. Play-to-Earn (P2E) mechanics let you earn real crypto rewards.
-
----
-
-## Current Features
-
-- **Decentralized AI**
-- **Multi-Chain Support**: Play on **Ethereum (EVM)**, **Solana**, and other supported blockchains. Your assets and rewards can move between chains.
-- **Play-to-Earn (P2E)**: Earn real **crypto rewards** while playing. Rewards are powered by the AITech Cloud Network's AI to make payouts fair.
-- **NFT Avatars**: Create and use **NFT avatars**, supported on Ethereum, and other networks.
-- **On-Chain Game Logic**: All gameplay is controlled by smart contracts.
-- **Token Integration**: Stake and earn with native tokens across different blockchains.
-- **Mobile and Desktop Ready**: The platform works on both **desktop** and **mobile** devices.
+[![Node.js](https://img.shields.io/badge/Node.js-v18-brightgreen)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+[![Polygon](https://img.shields.io/badge/Polygon-EVM-purple)](https://polygon.technology/)
+[![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-orange)](https://soliditylang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
 
-## Coming Soon
+## 🚀 Introduction
 
-- **More Games**: New games like **Blackjack**, **Roulette**, **Slots**, and others. All powered by decentralized AI.
-- **Tournaments**: Compete in cross-chain tournaments with prize pools. AI will manage the events and rewards.
-- **Social Features**: Chat, add friends, and interact with other players across different blockchains.
-- **Better P2E**: Improved reward systems that will work across all blockchains with the help of AI.
+**Alchemy_Verse** is a decentralized Metaverse platform where users can explore, create, and transact in a fully tokenized virtual world.  
+It leverages blockchain technology for transparent ownership, NFT-based assets, and provably fair gameplay mechanics.
 
+**Key Features:**
 
-[![React](https://img.shields.io/badge/React-16.13.1-61dafb?logo=react)](#)
-[![Node.js](https://img.shields.io/badge/Node.js-Express-43853d?logo=node.js)](#)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?logo=typescript)](#)
-[![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb)](#)
-[![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8.1-black?logo=socket.io)](#)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.1.3-purple?logo=bootstrap)](#)
-[![Styled Components](https://img.shields.io/badge/Styled_Components-5.1.1-DB7093?logo=styled-components)](#)
-[![Axios](https://img.shields.io/badge/Axios-1.4.0-5A29E4?logo=axios)](#)
+- 🌐 **Decentralized Digital Economy**: Buy, sell, and trade NFTs, tokens, and virtual assets securely  
+- 🕹️ **Immersive Experiences**: 3D worlds, interactive avatars, and multiplayer interactions  
+- 📱 **Cross-Platform Access**: Web, desktop, and mobile-ready  
+- 🔗 **Provably Fair Interactions**: Blockchain-based verifiable transactions  
+- 🗣️ **Community & Social Features**: Real-time chat, events, and collaboration  
 
+---
 
-## Quick Start
+## 🛠️ Current State Assessment
 
+- **Backend:** Node.js v18 with RESTful and WebSocket APIs  
+- **Frontend:** React / Next.js with WebGL / Unity integration  
+- **Metaverse Components:** Virtual world rendering, avatar management, NFT asset handling  
+- **Database:** PostgreSQL for structured data, MongoDB for flexible user content, IPFS for decentralized assets  
+- **Team Composition:**  
+  - 4 frontend developers (React, WebGL)  
+  - 2 blockchain developers (Solidity, EVM)  
+  - 2 backend developers (Node.js)  
+  - 1 Technical Manager  
+
+---
+
+## ⚙️ Technology Stack
+
+- **Frontend:** React / Next.js / Three.js / Babylon.js / TailwindCSS  
+- **Backend:** Node.js / TypeScript / PostgreSQL / MongoDB / Redis  
+- **Blockchain:** Solidity / Hardhat / Ethers.js / Polygon  
+- **3D Engine:** WebGL / Unity integration / Phaser.js for mini-games  
+- **Metaverse Assets:** NFT / IPFS / Token-based economy  
+- **Analytics & AI:** Python v3.12 for behavior tracking, recommendation, and data insights  
+- **Enterprise Layer:** Modex BCDB middleware  
+
+---
+
+## 🏗️ Architecture Overview
+
+The system is modular and service-oriented:
+
+- **Authentication Layer:** Web3 wallet login with SBT verification + traditional fallback  
+- **Virtual World Engine:** Modular 3D engine with multiple scenes and interaction layers  
+- **Blockchain Integration:** NFT ownership, token transactions, and asset verification  
+- **Social & Event Services:** Real-time chat, voice, and multiplayer events  
+- **Asset Management System:** NFT minting, trading, and lifecycle management  
+- **Identity & Reputation System:** Avatar & user profile achievements via SBT  
+- **Analytics Engine:** Tracks user engagement, transactions, and performance  
+
+---
+
+## ⚡ Quick Start
+
+### 1️⃣ Clone & Install Dependencies
 ```bash
-git clone <git-repository-url>
-cd <project directory name>
-
-# Install and start backend dependencies
 npm install
-npm start
-
-# Install frontend dependencies 
-cd client
-npm install
-cd ..
-
-# Run both with one command from the root:
-npm start
 ```
 
----
+### 2️⃣ Run the Development Server
+```bash
+npm start
+```
+### 3️⃣ Access the Application
+Open in your browser:
+```bash
+http://localhost:3000
+```
 
-## Config
+## 🖼️ Architecture Diagram
 
-- **JWT issuance** – `POST /api/auth` in `controllers/auth.js` signs a JWT with `config.JWT_SECRET_KEY` (see `SESSION_EXPIRES_IN`). The payload only contains `user.id` so you can safely extend it.
-- **Client storage** – Tokens are pushed into Axios’ default headers via `client/src/helpers/setAuthToken.js`. Persist them in `localStorage`/`sessionStorage` from your auth screen and call `setAuthToken(token)` on boot.
-- **Protected routes** – `middleware/auth.js` expects the token in the `x-auth-token` header and injects `req.user`. Use the middleware on any route that needs authenticated identity.
+```text
++----------------------+        +------------------------+        +----------------------+
+|      Frontend        | <----> |       Backend / API     | <----> |      Blockchain       |
+| React / Next.js      |        | Node.js / Express      |        | Solidity / Polygon    |
+| Three.js / Babylon.js|        | PostgreSQL / MongoDB   |        | NFT & Token Handling  |
+| TailwindCSS          |        | Redis / WebSocket      |        | Smart Contracts       |
++----------------------+        +------------------------+        +----------------------+
 
-## Contributing Guidelines
++----------------------+        +------------------------+        +----------------------+
+|  3D Engine / Unity   | <----> |  Asset Management      | <----> |  Identity & Reputation|
+|  WebGL Integration   |        | NFTs / Virtual Assets  |        | Soulbound Tokens (SBT)|
++----------------------+        +------------------------+        +----------------------+
 
-### Pre-PR Checklist
++----------------------+        +------------------------+
+| Social & Event Layer | <----> |  Analytics & AI Engine |
+| Chat / Voice / Events|        | Behavior Tracking      |
++----------------------+        | Recommendations        |
+                                +------------------------+
 
-- [ ] Branch is updated with `main`  
-- [ ] No linting errors
-- [ ] No stray console logs or unused variables  
-- [ ] UI changes tested on desktop and mobile  
-- [ ] Added documentation or comments where needed  
-- [ ] Any new `.env` variables are documented  
+```
 
-### Pull Request Rules
-- Use clear PR titles:
-  - `feat: add tournament lobby UI`
-- PR description must include:
-  - What changed  
-  - Why it changed  
-  - How to test  
-  - Screenshots for UI updates  
-- Tag related issues/tasks.
+## 🛠️ Tech Stack
 
-## Confidentiality
-This repository is proprietary to **AITech Cloud Network**.
-
+- **Frontend** – React / Next.js / Three.js / Babylon.js / TailwindCSS  
+- **Blockchain** – Solidity / Hardhat / Ethers.js / Polygon  
+- **Backend** – Node.js / TypeScript / PostgreSQL / MongoDB / Redis  
+- **3D Engine** – WebGL / Unity integration / Phaser.js for minigames  
+- **Metaverse Assets** – NFT / IPFS / Token-based economy  
+- **Analytics & AI** – Python v3.12 for behavior tracking, recommendation, and data insights  
+- **Enterprise Layer** – Modex BCDB middleware
