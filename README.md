@@ -1,7 +1,7 @@
 # 🌐 AjunaVerse MVP
 
 <p align="center">
-  <img src="./public/hero-banner.png" alt="AjunaVerse Banner" width="100%" />
+  <img src="./client/public/hero-banner.png" alt="AjunaVerse Banner" width="100%" />
 </p>
 
 [![Node.js](https://img.shields.io/badge/Node.js-v22-brightgreen)](https://nodejs.org/)
