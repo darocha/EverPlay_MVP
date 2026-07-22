@@ -36,6 +36,7 @@ const tables = {
   1: new Table(1, 'Table 1', config.INITIAL_CHIPS_AMOUNT),
 };
 const players = {};
+const HAND_START_DELAY_MS = 0;
 
 function getCurrentPlayers() {
   return Object.values(players).map((player) => ({
@@ -327,13 +328,18 @@ const init = (socket, io) => {
 
   function initNewHand(table) {
     if (table.activePlayers().length > 1) {
-      broadcastToTable(table, '---New hand starting in 5 seconds---');
+      broadcastToTable(
+        table,
+        HAND_START_DELAY_MS > 0
+          ? `---New hand starting in ${HAND_START_DELAY_MS / 1000} seconds---`
+          : '--- New hand starting ---',
+      );
     }
     setTimeout(() => {
       table.clearWinMessages();
       table.startHand();
       broadcastToTable(table, '--- New hand started ---');
-    }, 5000);
+    }, HAND_START_DELAY_MS);
   }
 
   function clearForOnePlayer(table) {

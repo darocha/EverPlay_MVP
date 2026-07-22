@@ -8,6 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = {
   PORT: process.env.PORT || 7777,
   JWT_SECRET: process.env.JWT_SECRET,
+  JWT_TOKEN_EXPIRES_IN: process.env.JWT_TOKEN_EXPIRES_IN || '7d',
   MONGO_URI: process.env.MONGO_URI,
   NODE_ENV: process.env.NODE_ENV,
   INITIAL_CHIPS_AMOUNT: 100000,

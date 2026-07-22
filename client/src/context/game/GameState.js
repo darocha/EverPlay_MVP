@@ -18,6 +18,8 @@ import socketContext from '../websocket/socketContext'
 import GameContext from './gameContext'
 import globalContext from '../global/globalContext'
 
+const TURN_TIMEOUT_MS = null
+
 const GameState = ({ children }) => {
   const { socket } = useContext(socketContext)
   const navigate = useNavigate()
@@ -41,8 +43,8 @@ const GameState = ({ children }) => {
   }, [currentTable])
 
   useEffect(() => {
-    if (turn && !turnTimeOutHandle) {
-      const handle = setTimeout(fold, 15000)
+    if (turn && TURN_TIMEOUT_MS && !turnTimeOutHandle) {
+      const handle = setTimeout(fold, TURN_TIMEOUT_MS)
       setHandle(handle)
     } else {
       turnTimeOutHandle && clearTimeout(turnTimeOutHandle)

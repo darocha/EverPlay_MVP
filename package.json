@@ -7,7 +7,7 @@
         "start:frontend": "npm install --prefix client && npm start --prefix client",
         "dev": "npx --yes concurrently \"npm run start:backend\" \"npm run start:frontend\"",
         "eject": "react-scripts eject",
-        "prepare": "start /b node server || nohup node server &",
+        "prepare": "node -e \"process.exit(0)\"",
         "test": "react-scripts test"
     },
     "private": "true",

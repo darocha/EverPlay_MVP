@@ -17,7 +17,6 @@ import { EmptySeat } from './EmptySeat'
 import { OccupiedSeat } from './OccupiedSeat'
 import { Hand } from '../Hand'
 import { NameTag } from '../NameTag'
-import Markdown from 'react-remarkable'
 import DealerButton from '../../icons/DealerButton'
 import SmallBlindButton from '../../icons/SmallBlindButton'
 import BigBlindButton from '../../icons/BigBlindButton'
@@ -64,7 +63,7 @@ export const Seat = ({ currentTable, seatNumber, sitDown }) => {
         <>
           <EmptySeat>
             <div className="empty-set-wrapper">
-              <Markdown><span className="empty-seat">Empty Seat</span></Markdown>
+              <span className="empty-seat">Empty Seat</span>
             </div>
           </EmptySeat>
         </>
